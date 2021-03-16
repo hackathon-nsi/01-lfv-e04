@@ -19,7 +19,10 @@ print(im2.format, im2.size, im2.mode) # im2 et no im parce que im = l'image du w
 # taille de l'image
 width, height = im2.size
 
-#n = int(input("Quelle taille de pixels voulez-vous? "))
+##n = 1
+##while n%2!=0:                        Dqs ist jetzt aber mit 2, muss es mit 900 ,achen weil dasmeine Bildlaenge ist
+##    n = int(input("Quelle taille de pixels voulez-vous? "))
+##
 
 # valeurs du pixel de coordonnées x, y (l'origine (0, 0) est en haut à gauche)
 ##pixel = im.getpixel((x, y))

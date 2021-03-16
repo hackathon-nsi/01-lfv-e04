@@ -1,9 +1,11 @@
 from PIL import Image
 #from IPython.display import display
 import urllib.request
+#from adam import *
+#from aron import *
 
 # ouvrir une image hébergée sur internet
-im = Image.open(urllib.request.urlopen('https://raw.githubusercontent.com/hackathon-nsi/h7n-nsi-01/main/images/washington.bmp'))
+#im = Image.open(urllib.request.urlopen('https://raw.githubusercontent.com/hackathon-nsi/h7n-nsi-01/main/images/washington.bmp'))
 im2 = Image.open("Tiger_Woods.jpg")
 
 # créer une nouvelle image vide
@@ -12,10 +14,12 @@ im2 = Image.open("Tiger_Woods.jpg")
 im_new = Image.open("Elon_Musk.jpg")
 
 # informations sur l'image
-print(im.format, im.size, im.mode)
+print(im2.format, im2.size, im2.mode) # im2 et no im parce que im = l'image du web
 
 # taille de l'image
-width, height = im.size
+width, height = im2.size
+
+#n = int(input("Quelle taille de pixels voulez-vous? "))
 
 # valeurs du pixel de coordonnées x, y (l'origine (0, 0) est en haut à gauche)
 ##pixel = im.getpixel((x, y))

@@ -20,7 +20,7 @@ width, height = im.size
 # valeurs du pixel de coordonnées x, y (l'origine (0, 0) est en haut à gauche)
 ##pixel = im.getpixel((x, y))
 #
-
+#######16 mars 2021
 #           0-100 = première ligne
 def arian():
     for y in range(0,100):

@@ -1,17 +1,19 @@
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance # le module ImageEnhance a pour classes: Color, Contrast, Brightness et Sharpness
 #from adam import *
 #from aron import *
 
-# ouvrir une image hébergée sur internet
+# ouvre la première image
 im = Image.open("Tiger_Woods.jpg")
 
 # transforme l´image en noir et blanc
 en = ImageEnhance.Color(im)
 im = en.enhance(0.0)
 
-# créer une nouvelle image vide
+# oubre l´image et change le contraste
 im_new = Image.open("Elon_Musk.jpg")
 im_new = im_new.convert("RGB")
+en = ImageEnhance.Contrast(im_new)
+im_new = en.enhance(0.7) # (0.0) = tout en gris et (1.0) = image sans effet
 
 datas = im_new.getdata()
 
@@ -19,7 +21,7 @@ datas = im_new.getdata()
 new_image_data = []
 for item in datas:
     if item[0] in list(range(190, 256)):
-        new_image_data.append((232, 37, 37))
+        new_image_data.append((232, 37, 37)) # la couleur utilisé (rouge)
     else:
         new_image_data.append(item)
 

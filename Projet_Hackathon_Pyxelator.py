@@ -9,7 +9,7 @@ im = Image.open("Tiger_Woods.jpg")
 en = ImageEnhance.Color(im)
 im = en.enhance(0.0)
 
-# oubre l´image et change le contraste
+# ouvre une deuxième image et change le contraste
 im_new = Image.open("Elon_Musk.jpg")
 im_new = im_new.convert("RGB")
 en = ImageEnhance.Contrast(im_new)

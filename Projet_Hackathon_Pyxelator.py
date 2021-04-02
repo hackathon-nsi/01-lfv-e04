@@ -1,31 +1,36 @@
-from PIL import Image
-#from IPython.display import display
-import urllib.request
+from PIL import Image, ImageEnhance
 #from adam import *
 #from aron import *
 
 # ouvrir une image hébergée sur internet
-#im = Image.open(urllib.request.urlopen('https://raw.githubusercontent.com/hackathon-nsi/h7n-nsi-01/main/images/washington.bmp'))
 im2 = Image.open("Tiger_Woods.jpg")
 
+# transforme l´image en noir et blanc
+en = ImageEnhance.Color(im2)
+im2 = en.enhance(0.0)
+
 # créer une nouvelle image vide
-# le deuxième argument représente la taille de l'image et le troisième argument (optionnel) la couleur de remplissage au format RVB
-#im_new = Image.new("RGB", (900,500), (26, 158, 214))
 im_new = Image.open("Elon_Musk.jpg")
+im_new = im_new.convert("RGB")
+
+datas = im_new.getdata()
+
+# change les couleurs de l´image
+new_image_data = []
+for item in datas:
+    if item[0] in list(range(190, 256)):
+        new_image_data.append((232, 37, 37))
+    else:
+        new_image_data.append(item)
+
+# la nouvelle image
+im_new.putdata(new_image_data)
 
 # informations sur l'image
-print(im2.format, im2.size, im2.mode) # im2 et no im parce que im = l'image du web
+print(im2.format, im2.size, im2.mode)
 
 # taille de l'image
 width, height = im2.size
-
-##n = 1
-##while n%2!=0:                        Dqs ist jetzt aber mit 2, muss es mit 900 ,achen weil dasmeine Bildlaenge ist
-##    n = int(input("Quelle taille de pixels voulez-vous? "))
-##
-
-# valeurs du pixel de coordonnées x, y (l'origine (0, 0) est en haut à gauche)
-##pixel = im.getpixel((x, y))
 
 #           0-100 = première ligne
 def arian():
@@ -152,15 +157,6 @@ def arian():
             pixel = im2.getpixel((x, y))
             im_new.putpixel((x,y),pixel)
 
-
-    ### valeurs des couleurs rouge, vert, bleu
-    ##p_rouge = pixel[0]
-    ##p_vert =  pixel[1]
-    ##p_bleu =  pixel[2]
-
-    # modification du pixel de coordonnées x, y
-
-
-    # affichage de l'image
-    ##display(im)
     im_new.show()
+
+print(arian())

@@ -161,4 +161,4 @@ def arian():
 
     im_new.show()
 
-print(arian())
+print(arian())       # seulement pour mon logiciel qui exécute les fonctions de cette manière

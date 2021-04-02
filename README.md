@@ -9,6 +9,7 @@
 <!-- ne pas effacer les lignes ci-dessus et mettre à jour la progression régulièrement -->
 
 ## JOURNAL DE BORD
-02/04: Arian: 2 images fusionée, avec chacune une autre fonction
+
 
 ## DOCUMENTATION
+Arian: 2 images fusionées, avec chacune une autre fonction

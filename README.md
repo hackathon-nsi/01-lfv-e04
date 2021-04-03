@@ -12,4 +12,4 @@
 
 
 ## DOCUMENTATION
-Arian: 2 images fusionées, avec chacune d´autres effets
+Arian: 2 images fusionées, avec chacune des effets différents

@@ -12,4 +12,4 @@
 
 
 ## DOCUMENTATION
-Arian: 2 images fusionées, avec chacune des effets différents
+Arian (Projet_Hackathon_Pyxelator): 2 images fusionées, avec chacune des effets différents

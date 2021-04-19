@@ -13,10 +13,12 @@
 Adam:
 Pour continuer mon projet j'aimerai trouver un moyen de raccourcire le programme et éventuellement modifier le programme pour demander le nombre de carreaux voulu.
 
+J'ai réissi a raccourcir le prgramme a deux for loops.
+
 ## DOCUMENTATION
 Arian (Projet_Hackathon_Pyxelator): 2 images fusionées, avec chacune des effets différents
 
-Adam (adam.py): quadrille un image et change les coueurs entre deux carreaux.
+Adam (adam_fonc.py): quadrille un image et change les coueurs entre deux carreaux.
 
 
 

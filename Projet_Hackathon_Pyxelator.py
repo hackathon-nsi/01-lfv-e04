@@ -51,6 +51,4 @@ def arian():
                     pixel = im.getpixel((x, y))
                     im_new.putpixel((x, y), pixel)
     im_new.show()
-
-
 print(arian())

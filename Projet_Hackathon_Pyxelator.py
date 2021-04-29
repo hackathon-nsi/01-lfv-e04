@@ -1,6 +1,7 @@
-from PIL import Image, ImageEnhance # le module ImageEnhance a pour classes: Color, Contrast, Brightness et Sharpness
-#from adam import *
-#from aron import *
+from PIL import Image, ImageEnhance  # le module ImageEnhance a pour classes: Color, Contrast, Brightness et Sharpness
+
+# from adam import *
+# from aron import *
 
 # ouvre la première image
 im = Image.open("Tiger_Woods.jpg")
@@ -13,7 +14,7 @@ im = en.enhance(0.0)
 im_new = Image.open("Elon_Musk.jpg")
 im_new = im_new.convert("RGB")
 en = ImageEnhance.Contrast(im_new)
-im_new = en.enhance(0.7) # (0.0) = tout en gris et (1.0) = image sans effet
+im_new = en.enhance(0.7)  # (0.0) = tout en gris et (1.0) = image sans effet
 
 datas = im_new.getdata()
 
@@ -21,7 +22,7 @@ datas = im_new.getdata()
 new_image_data = []
 for item in datas:
     if item[0] in list(range(190, 256)):
-        new_image_data.append((232, 37, 37)) # la couleur utilisé (rouge)
+        new_image_data.append((232, 37, 37))  # la couleur utilisé (rouge)
     else:
         new_image_data.append(item)
 
@@ -34,131 +35,22 @@ print(im.format, im.size, im.mode)
 # taille de l'image
 width, height = im.size
 
-#           0-100 = première ligne
+
 def arian():
-    for y in range(0,100):
-        for x in range(0,100):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
+    for i in range(5):
+        for c in range(3):  # lignes 1,3 et 5
+            for x in range(0 + i * 200, 100 + i * 200):
+                for y in range(0 + c * 200, 100 + c * 200):
+                    pixel = im.getpixel((x, y))
+                    im_new.putpixel((x, y), pixel)
 
-    for y in range(0,100):
-        for x in range(200,300):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(0,100):
-        for x in range(400,500):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(0,100):
-        for x in range(600,700):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(0,100):
-        for x in range(800,900):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    #          100-200 = deuxième ligne
-
-    for y in range(100,200):
-        for x in range(100,200):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(100,200):
-        for x in range(700,800):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(100,200):
-        for x in range(300,400):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(100,200):
-        for x in range(500,600):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    #          200-300 = troisième ligne
-
-    for y in range(200, 300):
-        for x in range(0, 100):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x, y), pixel)
-
-    for y in range(200, 300):
-        for x in range(200, 300):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x, y), pixel)
-
-    for y in range(200, 300):
-        for x in range(400, 500):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x, y), pixel)
-
-    for y in range(200, 300):
-        for x in range(600, 700):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x, y), pixel)
-
-    for y in range(200, 300):
-        for x in range(800, 900):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x, y), pixel)
-
-    #          300-400 = quatrième ligne
-
-    for y in range(300,400):
-        for x in range(100,200):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(300,400):
-        for x in range(300,400):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(300,400):
-        for x in range(500,600):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(300,400):
-        for x in range(700,800):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    #          400-500 = cinquième ligne
-
-    for y in range(400,500):
-        for x in range(0,100):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(400,500):
-        for x in range(200,300):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(400,500):
-        for x in range(400,500):
-            pixel = im.getpixel((x , y))
-            im_new.putpixel((x , y),pixel)
-
-    for y in range(400,500):
-        for x in range(600,700):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
-    for y in range(400,500):
-        for x in range(800,900):
-            pixel = im.getpixel((x, y))
-            im_new.putpixel((x,y),pixel)
-
+    for i in range(4):
+        for c in range(2):  # lignes 2 et 4
+            for x in range(100 + i * 200, 200 + i * 200):
+                for y in range(100 + c * 200, 200 + c * 200):
+                    pixel = im.getpixel((x, y))
+                    im_new.putpixel((x, y), pixel)
     im_new.show()
 
-print(arian())       # seulement pour mon logiciel qui exécute les fonctions de cette manière
+
+print(arian())

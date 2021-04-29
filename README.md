@@ -20,5 +20,7 @@ Arian (Projet_Hackathon_Pyxelator): 2 images fusionées, avec chacune des effets
 
 Adam (adam_fonc.py): quadrille un image et change les coueurs entre deux carreaux.
 
+Aron (main.py): sert de menu pour choisir quels modifications éfféctuer sur l'image.
+
 
 

@@ -18,7 +18,7 @@ J'ai réissi a raccourcir le prgramme a deux for loops.
 ## DOCUMENTATION
 Arian (Projet_Hackathon_Pyxelator): 2 images fusionées, avec chacune des effets différents
 
-Adam (adam_fonc.py): quadrille un image et change les coueurs entre deux carreaux.
+Adam (adam_fonc.py): Demande la taille des rectangles pour quadriller un image et change les coueurs entre deux carreaux.
 
 Aron (main.py): sert de menu pour choisir quels modifications éfféctuer sur l'image.
 
